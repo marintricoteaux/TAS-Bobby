@@ -1,5 +1,10 @@
 // Globales
 
+//def pour le TAS
+const isTASJumping = false
+const isTASMovingRight = false
+const isTASMovingLeft = false
+
 //Constantes
 const PLAYER_VELOCITY = 240
 const PLAYER_BOUNCE_OFF_VELOCITY = 400
