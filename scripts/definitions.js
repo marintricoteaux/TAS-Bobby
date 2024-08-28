@@ -1,9 +1,9 @@
 // Globales
 
 //def pour le TAS
-const isTASJumping = false
-const isTASMovingRight = false
-const isTASMovingLeft = false
+let TASJump = false
+let TASMoveRight = false
+let TASMoveLeft = false
 
 //Constantes
 const PLAYER_VELOCITY = 240

@@ -5,9 +5,11 @@ setIntervall(() => {}, tempsEnMillisecondes); Qui permet d'execurer des actions 
 */
 
 setTimeout(() => {
-    console.log('2 secondes sont passées');
-}, 2000);
+    TASJump = true
+    console.log("TASJUMP = TRUE après 10s")
+}, 10000)
 
-setInterval(() => {
-    console.log('1 seconde est passée');
-}, 1000);
+setTimeout(() => {
+    TASJump = false
+    console.log("TASJUMP = FALSE après 15s")
+}, 15000)

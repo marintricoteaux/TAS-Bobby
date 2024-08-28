@@ -1,0 +1,3 @@
+j'ai réussi à faire en sorte que bobby saute pendant 5sec après 10sec si et seulement si le timer a commencé (ou une touche a été préssé), cela ne doit plus être le case.
+Ensuite je dois faire pareil pour les mouvements de droites à gauche. Et je dois régler le fait qu'il ne fasse pas de double saut.
+Ainsi demain je supp TASjump et je commence par TASMoveLeft.
