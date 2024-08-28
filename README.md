@@ -1,6 +1,7 @@
 # Anawan - Challenge 1 abonné = 1 ligne de code
 
 EDIT : Ce projet consiste à créer un TAS pour permettre aux modérateur de speedrun.com du jeu de connaitre le temps minimal pour créer un jeu.
+Vous pouvez optimiser le TAS vous même en le controlant avec la fonction doActionTAS(date,durée,action).
 CODE EDITED BY MARIN TRICOTEAUX
 
 Pour ce petit challenge, on code un jeu vidéo en javascript avec la librairie [Phaser](https://phaser.io/), avec autant de lignes de code que d'abonnés sur ma chaîne.

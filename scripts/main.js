@@ -763,9 +763,9 @@ class GameScene extends Phaser.Scene {
     this.player.body.setVelocityX(0)
 
     // Gérer les mouvements à gauche et à droite
-    if (this.cursors.left.isDown || this.keys.Q.isDown || this.touchLeft) {
+    if (this.cursors.left.isDown || this.keys.Q.isDown || this.touchLeft || TASMoveLeft) {
       this.player.body.setVelocityX(-PLAYER_VELOCITY)
-    } else if (this.cursors.right.isDown || this.keys.D.isDown || this.touchRight) {
+    } else if (this.cursors.right.isDown || this.keys.D.isDown || this.touchRight || TASMoveRight) {
       this.player.body.setVelocityX(PLAYER_VELOCITY)
     }
 
