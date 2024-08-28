@@ -773,8 +773,7 @@ class GameScene extends Phaser.Scene {
     const justTriggeredJump =
       Phaser.Input.Keyboard.JustDown(this.zKey) ||
       Phaser.Input.Keyboard.JustDown(this.upKey) ||
-      Phaser.Input.Keyboard.JustDown(this.spaceKey) ||
-      TASJump
+      Phaser.Input.Keyboard.JustDown(this.spaceKey)
     if (justTriggeredJump) {
       this.jump()
     }
