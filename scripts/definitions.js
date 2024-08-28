@@ -4,6 +4,7 @@
 let TASJump = false
 let TASMoveRight = false
 let TASMoveLeft = false
+let TASDureeSaut = 0
 
 //Constantes
 const PLAYER_VELOCITY = 240

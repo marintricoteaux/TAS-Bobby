@@ -11,6 +11,7 @@ function doActionTAS(dateMs, duree, action)
             case "JUMP":
                 console.log("TAS JUMPED")
                 TASJump = true
+                TASDureeSaut = duree
                 break
             case "MOVE-RIGHT":
                 console.log("TAS MOVED RIGHT")
@@ -27,6 +28,7 @@ function doActionTAS(dateMs, duree, action)
             case "JUMP":
                 console.log("TAS NOT JUMPING")
                 TASJump = false
+                TASDureeSaut = 0
                 break
             case "MOVE-RIGHT":
                 console.log("TAS NOT MOVING")

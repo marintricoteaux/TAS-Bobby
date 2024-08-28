@@ -4,4 +4,5 @@
 3ème paramètre : Voici les seules actions à rentrer : "MOVE-RIGHT", "MOVE-LEFT", "JUMP".
 */
 
-doActionTAS(10000, 5000, "MOVE-RIGHT")
+doActionTAS(5000, 50, "JUMP")
+//doActionTAS(5150, 150, "JUMP")

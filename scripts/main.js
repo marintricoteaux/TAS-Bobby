@@ -774,7 +774,7 @@ class GameScene extends Phaser.Scene {
       Phaser.Input.Keyboard.JustDown(this.zKey) ||
       Phaser.Input.Keyboard.JustDown(this.upKey) ||
       Phaser.Input.Keyboard.JustDown(this.spaceKey)
-    if (justTriggeredJump) {
+    if (justTriggeredJump) { //TASJump
       this.jump()
     }
 
@@ -811,7 +811,7 @@ class GameScene extends Phaser.Scene {
     }
 
     // Gérer le saut progressif
-    if (this.isJumping && this.isUpKeyPressed) {
+    if (this.isJumping && (this.isUpKeyPressed)) {
       let pressDuration = time - this.jumpStartTime
       if (pressDuration > PLAYER_MAX_JUMP_TIME) {
         this.isJumping = false
