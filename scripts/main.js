@@ -712,16 +712,17 @@ class GameScene extends Phaser.Scene {
   }
 
   update(time, delta) {
-        // Mouvement des ennemis
-
     //EDIT : TAS
-    if (!TASJump)
+    if (!TASJump){
       TASJustJumped = 0
+      TASDureeSaut = 0
+    }
     if (TASJustJumped === 1 || TASJustJumped === 2)
       TASJustJumped = 2
     else if (TASJump)
       TASJustJumped = 1
 
+    // Mouvement des ennemis
     this.enemies
       .getChildren()
       .filter((enemy) => !enemy.getData('isDead'))
@@ -813,7 +814,7 @@ class GameScene extends Phaser.Scene {
 
     // Jump buffering
     if (
-      (this.isUpKeyPressed) &&
+      this.isUpKeyPressed &&
       this.player.body.blocked.down &&
       time - this.jumpBufferingTime < PLAYER_BUFFERING_TIME
     ) {
@@ -821,16 +822,19 @@ class GameScene extends Phaser.Scene {
     }
 
     // Gérer le saut progressif
-    if (this.isJumping && (this.isUpKeyPressed)) {
+    if (this.isJumping && this.isUpKeyPressed) {
       let pressDuration = time - this.jumpStartTime
       if (pressDuration > PLAYER_MAX_JUMP_TIME) {
         this.isJumping = false
         pressDuration = PLAYER_MAX_JUMP_TIME
       }
+      if (TASDureeSaut > PLAYER_MAX_JUMP_TIME) {
+        this.isJumping = false
+        TASDureeSaut = PLAYER_MAX_JUMP_TIME
+      }
 
-      const t = pressDuration / PLAYER_MAX_JUMP_TIME
-      const jumpVelocity =
-        PLAYER_MIN_JUMP_VELOCITY + (PLAYER_MAX_JUMP_VELOCITY - PLAYER_MIN_JUMP_VELOCITY) * Math.pow(t, 2)
+      const t = TASDureeSaut / PLAYER_MAX_JUMP_TIME
+      const jumpVelocity = PLAYER_MIN_JUMP_VELOCITY + (PLAYER_MAX_JUMP_VELOCITY - PLAYER_MIN_JUMP_VELOCITY) * Math.pow(t, 2)
       this.player.body.setVelocityY(jumpVelocity)
     }
 
