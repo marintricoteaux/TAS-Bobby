@@ -1,7 +1,6 @@
 /*
 Dans ce fichier j'utiliserai les fonctions natives de js pour créer la fonction :
 setTimeout(() => {}, tempsEnMillisecondes); Qui permet d'executer des actions après un temps (en ms) donné
-setInterval(() => {}, tempsEnMillisecondes); Qui permet d'execurer des actions à une intervalles (en ms) donné 
 */
 
 function doActionTAS(dateMs, duree, action)
