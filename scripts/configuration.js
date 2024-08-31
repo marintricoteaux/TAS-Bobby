@@ -5,4 +5,6 @@
 */
 
 doActionTAS(10000, 10, "JUMP")
-doActionTAS(15000, 150, "JUMP")
+doActionTAS(10250, 150, "JUMP")
+
+doActionTAS(5000, 5000, "MOVE-RIGHT")
