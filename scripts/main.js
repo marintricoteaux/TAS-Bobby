@@ -713,6 +713,15 @@ class GameScene extends Phaser.Scene {
 
   update(time, delta) {
         // Mouvement des ennemis
+
+    //EDIT : TAS
+    if (!TASJump)
+      TASJustJumped = 0
+    if (TASJustJumped === 1 || TASJustJumped === 2)
+      TASJustJumped = 2
+    else if (TASJump)
+      TASJustJumped = 1
+
     this.enemies
       .getChildren()
       .filter((enemy) => !enemy.getData('isDead'))
@@ -773,8 +782,9 @@ class GameScene extends Phaser.Scene {
     const justTriggeredJump =
       Phaser.Input.Keyboard.JustDown(this.zKey) ||
       Phaser.Input.Keyboard.JustDown(this.upKey) ||
-      Phaser.Input.Keyboard.JustDown(this.spaceKey)
-    if (justTriggeredJump) { //TASJump
+      Phaser.Input.Keyboard.JustDown(this.spaceKey) ||
+      TASJustJumped === 1
+    if (justTriggeredJump) {
       this.jump()
     }
 

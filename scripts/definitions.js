@@ -5,6 +5,7 @@ let TASJump = false
 let TASMoveRight = false
 let TASMoveLeft = false
 let TASDureeSaut = 0
+let TASJustJumped = 0 //si TASJustJumped vaut 0 il n'as pas sauté, si il vaut 1 il a juste sauté, si il vaut 2 il a déjà sauté
 
 //Constantes
 const PLAYER_VELOCITY = 240
