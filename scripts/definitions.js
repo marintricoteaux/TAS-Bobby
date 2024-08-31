@@ -1,6 +1,6 @@
 // Globales
 
-//def pour le TAS
+//DEF pour le TAS
 let TASJump = false
 let TASMoveRight = false
 let TASMoveLeft = false
