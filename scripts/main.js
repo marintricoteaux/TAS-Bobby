@@ -247,6 +247,7 @@ Dans cette partie j'utiliserai la fonction native de js pour créer ma fonction 
 setTimeout(() => {}, tempsEnMillisecondes); Qui permet d'executer des actions après un temps (en ms) donné
 */
 
+
 function doActionTAS(dateMs, duree, action)
 {
     setTimeout(() => {
